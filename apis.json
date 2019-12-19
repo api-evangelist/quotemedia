@@ -1,0 +1,70 @@
+{
+    "name": "QuoteMedia",
+    "description": "QuoteMedia Inc. provides financial data, news feeds, market research information and financial software solutions to online brokerages, clearing firms, banks, financial service companies, media portals and public corporations. The Company offers a sour...",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/quotemedia_large_company_logo.png",
+    "tags": [
+        "contacts",
+        "financial services",
+        "have api",
+        "market data"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/quotemedia\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "QuoteMedia",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/quotemedia_large_company_logo.png",
+            "humanURL": "http:\/\/quotemedia.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/quotemedia-postman-collection.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Contact Form",
+            "url": "http:\/\/www.quotemedia.com\/contact"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/quotemedia"
+        },
+        {
+            "type": "Email",
+            "url": "support@quotemedia.com"
+        },
+        {
+            "type": "Email",
+            "url": "sales@quotemedia.com"
+        },
+        {
+            "type": "Email",
+            "url": "billing@quotemedia.com"
+        },
+        {
+            "type": "Email",
+            "url": "unsubscribe@quotemedia.com"
+        },
+        {
+            "type": "Email",
+            "url": "info@quotemedia.com"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/quotemedia.com"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/www.quotemedia.com"
+        }
+    ]
+}

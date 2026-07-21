@@ -1,0 +1,113 @@
+aid: quotemedia
+name: QuoteMedia
+review:
+  question: Does QuoteMedia expose a public, self-serve documented API surface?
+  answer: partial
+  date: '2026-07-21'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    QuoteMedia is a mid-market, entitlement-managed market data vendor - an
+    independent public company (OTC QMCI, Fountain Hills, Arizona, founded
+    1999), not an acquired data arm. It has a real public API marketing
+    surface but no open developer portal. The QuoteMedia OnDemand (QMOD)
+    cloud REST API is publicly described at www.quotemedia.com/apifeeds and
+    in the brochures.quotemedia.com/quotemedia-on-demand brochure (quotes,
+    Level 1/2, historical OHLCV/tick, option chains with Greeks,
+    fundamentals, earnings, news from 300+ sources, SEC/SEDAR filings,
+    corporate actions, fund data, insider/institutional ownership, ESG,
+    master data; JSON/XML/CSV over HTTPS). The QMOD host is live and
+    publicly reachable: GET https://app.quotemedia.com/data/getQuotes.json
+    returns HTTP 200 with a JSON fault "Webmaster ID is required" -
+    confirming the documented base URL and the webmaster-ID/entitlement
+    auth model without any key being obtainable self-serve. Detailed
+    endpoint reference documentation lives on the Freshdesk knowledge base,
+    and the developer articles ("Quotestream Connect for Developers",
+    "Request API Services Introduction") redirect to a Freshworks OAuth
+    login (HTTP 302) - documentation exists but is account-gated. The
+    former public dev-docs host www.wdev.quotemedia.com is now behind
+    Cloudflare Access. Streaming is via an enterprise tick-by-tick feed
+    with WebSocket, Java, and .NET APIs (plus the QMZ zero-exchange-fee
+    real-time offering); bulk delivery is SFTP flat files. No public
+    OpenAPI, Swagger, or AsyncAPI specification was found anywhere (no
+    GitHub organization; github.com/quotemedia is HTTP 404), so no spec
+    was harvested. Posture: sales-provisioned for commercial use, with a
+    self-service Quotestream Connect package for non-professional
+    developers; API pricing is not published.
+  authModel: Webmaster ID plus entitlements provisioned by QuoteMedia (sales/support),
+    passed as request parameters; no self-serve API key signup.
+  posture: sales-gated with account-gated documentation; live public REST host
+  deliveryChannels:
+  - REST (HTTPS, JSON/XML/CSV - QMOD OnDemand)
+  - WebSocket (Streaming Data Feed)
+  - Java/.NET client APIs (Streaming Data Feed)
+  - SFTP flat files (File Services)
+  openapi: none published; nothing harvested
+  probes:
+  - url: https://quotemedia.com/
+    status: 200
+  - url: https://www.quotemedia.com/apifeeds
+    status: 200
+  - url: https://quotemedia.com/solutions/data-feed
+    status: 200
+  - url: https://app.quotemedia.com/data/getQuotes.json?symbols=AAPL
+    status: 200
+    note: JSON fault 0002 "Webmaster ID is required" - live host, entitlement-gated.
+  - url: https://brochures.quotemedia.com/quotemedia-on-demand
+    status: 200
+  - url: https://demo.quotemedia.com/qmod-catalog
+    status: 200
+    note: Public QMod web-widget catalog (charts, company research, news/filings).
+  - url: https://quotemediasupport.freshdesk.com/support/home
+    status: 200
+    note: Knowledge base home is public; developer API articles are login-gated.
+  - url: https://support.quotemedia.com/support/solutions/articles/13000091019-quotestream-connect-for-developers
+    status: 302
+    note: Redirects to Freshworks OAuth login.
+  - url: https://www.wdev.quotemedia.com/apifeeds
+    status: 302
+    note: Behind Cloudflare Access login (qmci.cloudflareaccess.com).
+  - url: https://status.quotemedia.com
+    status: 200
+  - url: https://quotemedia.com/legal/tos
+    status: 200
+  - url: https://quotemedia.com/legal/privacy-policy
+    status: 200
+  - url: https://developer.quotemedia.com
+    status: 0
+    note: No DNS/connection - host does not resolve.
+  - url: https://docs.quotemedia.com
+    status: 0
+    note: No DNS/connection - host does not resolve.
+  - url: https://github.com/quotemedia
+    status: 404
+    note: No GitHub organization found.
+sources:
+  - url: https://www.quotemedia.com/apifeeds
+    type: Documentation
+    note: Public Data Feeds & APIs landing page; lists OnDemand, streaming, file
+      services, widget catalog, and knowledge base.
+  - url: https://quotemedia.com/solutions/data-feed
+    type: Documentation
+    note: Names WebSocket/.Net/Java streaming APIs, OnDemand REST (XML/JSON),
+      SFTP file services, historical CSV/XML/JSON, CFI Code Composer.
+  - url: https://brochures.quotemedia.com/quotemedia-on-demand
+    type: Documentation
+    note: QMOD brochure - cloud REST API, JSON/XML/CSV, full data category list.
+  - url: https://quotemedia.com/company/blog/breaking-down-barriers-to-market-data-introducing-quotemedia-zero-qmz
+    type: Blog
+    note: QMZ (QuoteMedia Zero) zero-exchange-fee real-time streaming API offering.
+  - url: https://stockanalysis.com/quote/otc/QMCI/company/
+    type: Reference
+    note: Ownership - independent public company, OTC QMCI, Fountain Hills AZ,
+      founded 1999 by R. Keith Guelpa and Duane A. Nelson.
+actions:
+  openapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    Four real documented API products were cataloged (QMOD OnDemand REST,
+    Streaming Data Feed, File Services, Quotestream Connect for Developers)
+    from public marketing, brochure, and support-portal surfaces, with the
+    QMOD base URL confirmed live by probe. No OpenAPI/Swagger/AsyncAPI
+    artifact is publicly downloadable, so the openapi/ folder was left out
+    rather than fabricating a spec.

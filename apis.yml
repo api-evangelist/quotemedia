@@ -1,0 +1,132 @@
+aid: quotemedia
+url: https://raw.githubusercontent.com/api-evangelist/quotemedia/refs/heads/main/apis.yml
+name: QuoteMedia
+kind: company
+description: QuoteMedia, Inc. is an independent, publicly traded (OTC QMCI) financial
+  market data and financial technology company headquartered in Fountain Hills, Arizona,
+  founded in 1999. It licenses real-time, delayed, and historical market data - equities,
+  options, futures, commodities, currencies, mutual funds, ETFs, and indices - plus
+  fundamentals, news, SEC/SEDAR filings, corporate actions, earnings, fund research,
+  and ESG data to brokerages, banks, media, and investor relations customers. Data
+  is delivered through the QuoteMedia OnDemand (QMOD) cloud REST API in JSON, XML,
+  and CSV, an enterprise tick-by-tick Streaming Data Feed with WebSocket, Java, and
+  .NET APIs, and bulk file services over SFTP. Access is entitlement-managed via
+  webmaster IDs provisioned through sales, with a Quotestream Connect self-service
+  package for individual developers; detailed API reference documentation lives behind
+  a login on the company's Freshdesk knowledge base.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial
+- Market Data
+- Stocks
+- Options
+- Real-Time
+- Streaming
+- News
+- Fundamentals
+- Reference Data
+created: '2026-07-21'
+modified: '2026-07-21'
+specificationVersion: '0.19'
+apis:
+- aid: quotemedia:quotemedia-ondemand-api
+  name: QuoteMedia OnDemand (QMOD) Data API
+  tags:
+  - Market Data
+  - Quotes
+  - Options
+  - Fundamentals
+  - News
+  - REST
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.quotemedia.com/apifeeds
+  baseURL: https://app.quotemedia.com/data
+  properties:
+  - url: https://www.quotemedia.com/apifeeds
+    type: Documentation
+  - url: https://brochures.quotemedia.com/quotemedia-on-demand
+    type: Documentation
+  - url: https://quotemedia.com/solutions/data-feed
+    type: Documentation
+  description: Cloud-based request/response REST API delivering real-time and delayed
+    Level 1/Level 2 quotes, trades, historical OHLCV and tick data, full option chains
+    with Greeks, fundamentals, earnings, news from 300+ sources, SEC and SEDAR filings,
+    corporate actions, fund data, insider and institutional ownership, ESG ratings,
+    and master/reference data over HTTPS in JSON, XML, and CSV. The base host is live
+    (endpoints such as getQuotes.json respond publicly) but every call requires a
+    sales-provisioned Webmaster ID and entitlements; the full endpoint reference is
+    behind the Freshdesk knowledge-base login.
+- aid: quotemedia:quotemedia-streaming-data-feed-api
+  name: QuoteMedia Streaming Data Feed API
+  tags:
+  - Streaming
+  - WebSocket
+  - Level 2
+  - Tick Data
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://quotemedia.com/solutions/data-feed
+  properties:
+  - url: https://quotemedia.com/solutions/data-feed
+    type: Documentation
+  description: Enterprise tick-by-tick streaming feed for real-time or delayed Level
+    1 and Level 2 market data, normalized across exchanges and delivered through a
+    WebSocket API plus Java and .NET client APIs. The company's QMZ (QuoteMedia Zero)
+    offering delivers real-time price data with consolidated US volume over the same
+    streaming API without exchange license agreements. Sales-gated; no public endpoint
+    hosts or protocol reference are published.
+- aid: quotemedia:quotemedia-file-services
+  name: QuoteMedia File Services
+  tags:
+  - Flat Files
+  - SFTP
+  - End of Day
+  - Corporate Actions
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://quotemedia.com/solutions/data-feed
+  properties:
+  - url: https://quotemedia.com/solutions/data-feed
+    type: Documentation
+  description: Bulk data delivery via SFTP flat files for systematic import of price
+    data, financials, corporate actions, and fund data, alongside historical time-series
+    downloads in CSV, XML, and JSON. Sales-gated enterprise service documented at
+    the marketing level only.
+- aid: quotemedia:quotestream-connect-for-developers
+  name: Quotestream Connect for Developers
+  tags:
+  - Developers
+  - Streaming
+  - Request API
+  - Self-Service
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://support.quotemedia.com/support/solutions/articles/13000091019-quotestream-connect-for-developers
+  properties:
+  - url: https://support.quotemedia.com/support/solutions/articles/13000091019-quotestream-connect-for-developers
+    type: Documentation
+  description: Self-service package for non-professional developers building personal
+    applications, combining tick-by-tick streaming data with request APIs, developer
+    kits with documentation and example code, 90 days of intraday history, EOD data,
+    futures continuation data, and symbol lookup. The documentation articles on the
+    QuoteMedia support portal require a login (they redirect to Freshworks OAuth),
+    so the developer kit contents are not publicly browsable.
+common:
+- type: Website
+  url: https://quotemedia.com/
+- type: Portal
+  url: https://www.quotemedia.com/apifeeds
+- type: Documentation
+  url: https://quotemediasupport.freshdesk.com/support/home
+- type: Support
+  url: https://quotemediasupport.freshdesk.com/support/home
+- type: StatusPage
+  url: https://status.quotemedia.com
+- type: Blog
+  url: https://quotemedia.com/company/blog
+- type: LinkedIn
+  url: https://www.linkedin.com/company/quotemedia
+- type: TermsOfService
+  url: https://quotemedia.com/legal/tos
+- type: PrivacyPolicy
+  url: https://quotemedia.com/legal/privacy-policy
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

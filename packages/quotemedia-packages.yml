@@ -1,0 +1,52 @@
+generated: '2026-07-22'
+method: searched
+source: npm registry, NuGet, Maven Central, RubyGems, GitHub
+packages:
+  - language: javascript
+    registry: npm
+    name: "@quotemedia.com/streamer"
+    url: https://www.npmjs.com/package/@quotemedia.com/streamer
+    install: npm install @quotemedia.com/streamer
+    version: 2.70.0
+    description: A JavaScript client for QuoteMedia's streaming data service.
+    official: true
+    note: Published by npm user streamingservicequotemedia; latest release 2026-07-15; 39 versions.
+  - language: csharp
+    registry: nuget
+    name: QuotemediaStreamerClient
+    url: https://www.nuget.org/packages/QuotemediaStreamerClient
+    install: dotnet add package QuotemediaStreamerClient
+    version: 2.56.0
+    description: .NET streaming client that provides easy-to-use client APIs to connect and subscribe to QuoteMedia's streaming data feed.
+    official: true
+    note: NuGet author listed as QuoteMedia.
+  - language: java
+    registry: maven
+    name: com.quotemedia.streamer:streamerclient-java-core
+    url: https://central.sonatype.com/artifact/com.quotemedia.streamer/streamerclient-java-core
+    install: "implementation 'com.quotemedia.streamer:streamerclient-java-core:2.56.0'"
+    version: 2.56.0
+    description: Java core client for QuoteMedia's streaming data feed.
+    official: true
+    note: First-party groupId com.quotemedia.streamer on Maven Central.
+  - language: ruby
+    registry: rubygems
+    name: quotemedia
+    url: https://rubygems.org/gems/quotemedia
+    install: gem install quotemedia
+    version: 0.0.2
+    description: A thin community wrapper for QuoteMedia APIs.
+    official: false
+    note: Third-party (author Chenoa Siegenthaler, github.com/cowmanifestation/quotemedia).
+  - language: php
+    registry: github
+    name: wontonst/php-quotemedia-api
+    url: https://github.com/wontonst/php-quotemedia-api
+    install: composer require via GitHub source
+    description: Community PHP library for the QuoteMedia OnDemand (QMOD) API.
+    official: false
+notes: >-
+  QuoteMedia publishes first-party streaming-feed client SDKs for JavaScript (npm),
+  .NET (NuGet), and Java (Maven Central); the npm and NuGet/Maven version trains
+  track the same streamer client releases. No first-party packages found on PyPI,
+  RubyGems, Packagist, crates.io, or pkg.go.dev. No public GitHub organization found.

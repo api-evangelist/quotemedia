@@ -1,0 +1,41 @@
+generated: '2026-07-22'
+method: searched
+source: https://qmod.quotemedia.com/tools/, https://demo.quotemedia.com/, https://support.quotemedia.com/support/solutions/articles/13000020415-qmod-the-future-of-financial-web-content
+name: QMod
+description: >-
+  QMod is QuoteMedia's framework of JSON-powered, HTML5 embeddable market-data
+  widgets ("Content Solutions"). Components load asynchronously, update
+  dynamically without page reloads, are template-customizable, and are access
+  controlled by domain, referrer, IP, or token.
+version:
+  current: v1.111.0
+  history: v1.0.9 through v1.111.0 listed at https://qmod.quotemedia.com/tools/
+loaders:
+  - url: https://qmod.quotemedia.com/js/qmodLoader.js
+    note: Legacy QMod loader script.
+  - url: https://static.c1.quotemedia.com/qmodii/versions/<version>/index.js
+    note: QMod II ES-module loader, version-pinned (observed v1.108.0 on demo.quotemedia.com).
+catalog: https://demo.quotemedia.com/qmod-catalog
+families:
+  - family: Quotes & Market Performance
+    components: [detailedquotetab, detailedquotetabchart, dayyearrange, 52weekperformers, dailyvolumeleaders]
+  - family: Charting
+    components: [advancedchart]
+  - family: Financials & Fundamentals
+    components: [financials, financials10yr, financials20yr, financialsummary]
+  - family: Earnings & Analysts
+    components: [earningscalendar, earningsinsights, analystratings, analystrecommendations, analystresearch]
+  - family: News & Filings
+    components: [fullnews]
+  - family: Funds
+    components: [fundcomparison, fundholdings, fundperformance]
+  - family: Options
+    components: [options widgets (catalog section at demo.quotemedia.com/qmod-catalog/options)]
+  - family: Portfolios & Watchlists
+    components: [watchlists and portfolios (per public support article 13000071480)]
+notes: >-
+  Component list above reflects the production components page and public demo
+  catalog; the full catalog spans quotes, indices, options, commodities, forex,
+  mutual funds, news, charting, filings, corporate financials, earnings, analyst
+  and insider content. Full implementation docs are on the Freshdesk support
+  portal (some articles public, deeper reference gated).

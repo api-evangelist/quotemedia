@@ -14,7 +14,18 @@ description: QuoteMedia, Inc. is an independent, publicly traded (OTC QMCI) fina
   webmaster IDs provisioned through sales, with a Quotestream Connect self-service
   package for individual developers; detailed API reference documentation lives behind
   a login on the company's Freshdesk knowledge base.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/quotemedia.png
 tags:
 - Financial
 - Market Data
@@ -26,7 +37,7 @@ tags:
 - Fundamentals
 - Reference Data
 created: '2026-07-21'
-modified: '2026-07-21'
+modified: '2026-07-22'
 specificationVersion: '0.19'
 apis:
 - aid: quotemedia:quotemedia-ondemand-api
@@ -109,6 +120,26 @@ apis:
     QuoteMedia support portal require a login (they redirect to Freshworks OAuth),
     so the developer kit contents are not publicly browsable.
 common:
+- type: DomainSecurity
+  url: security/quotemedia-domain-security.yml
+- type: Packages
+  url: packages/quotemedia-packages.yml
+- type: SDKs
+  url: packages/quotemedia-packages.yml
+- type: WellKnown
+  url: well-known/quotemedia-well-known.yml
+- type: LLMsTxt
+  url: llms/quotemedia-llms.txt
+- type: ErrorCatalog
+  url: errors/quotemedia-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/quotemedia-lifecycle.yml
+- type: Authentication
+  url: authentication/quotemedia-authentication.yml
+- type: Components
+  url: components/quotemedia-components.yml
+- type: Conventions
+  url: conventions/quotemedia-conventions.yml
 - type: Website
   url: https://quotemedia.com/
 - type: Portal

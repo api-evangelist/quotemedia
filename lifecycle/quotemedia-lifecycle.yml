@@ -1,0 +1,35 @@
+generated: '2026-07-22'
+method: searched
+source: https://status.quotemedia.com, https://qmod.quotemedia.com/tools/
+status_page: https://status.quotemedia.com
+versioning:
+  qmod_api:
+    scheme: unversioned-path
+    note: >-
+      QMOD (QuoteMedia OnDemand) REST endpoints live at https://app.quotemedia.com/data/<product>.<format>
+      with no version segment in the path; changes are managed server-side per entitlement.
+  qmod_widgets:
+    scheme: semver
+    current: v1.111.0
+    note: >-
+      The QMod embeddable component library is versioned (v1.0.9 through v1.111.0
+      listed at qmod.quotemedia.com/tools/); sites pin a version via the loader
+      script URL (static.c1.quotemedia.com/qmodii/versions/<version>/index.js).
+  streamer_sdks:
+    scheme: semver
+    current: 2.70.0 (npm) / 2.56.0 (Maven, NuGet)
+    note: First-party streaming client SDK release trains on npm, Maven Central, and NuGet.
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: No public deprecation policy or RFC 8594 Sunset-header commitment is published.
+sla:
+  url: null
+  note: >-
+    The apifeeds marketing page advertises 99.99% uptime, but no contractual SLA
+    document is public; service terms are negotiated with sales.
+deprecated_operations: []
+notes: >-
+  Public lifecycle surface is limited to the status page and the versioned QMod
+  widget/SDK release trains; API-level versioning and deprecation commitments are
+  handled in sales-gated documentation.

@@ -1,0 +1,37 @@
+generated: '2026-07-22'
+method: searched
+source: live probes of https://app.quotemedia.com/data 2026-07-22; https://www.quotemedia.com/apifeeds
+authentication:
+  style: entitlement-managed Webmaster ID query parameter (webmasterId); see authentication/quotemedia-authentication.yml
+endpoints:
+  naming: >-
+    QMOD products are verb-prefixed resources requested as
+    /data/<product>.<format>, e.g. getQuotes.json, getQuotes.xml.
+  formats: [json, xml, csv]
+  format_selection: file-extension suffix on the endpoint path (.json / .xml / .csv)
+  batching: >-
+    Symbol-oriented endpoints accept comma-separated symbols parameters;
+    community clients document per-call symbol caps (e.g. 100 symbols for
+    getQuotes) enforced server-side.
+errors:
+  envelope: >-
+    HTTP 200 with results.error.{faultcode,faultstring} inside the response
+    envelope; see errors/quotemedia-problem-types.yml.
+idempotency:
+  supported: null
+  note: >-
+    Read-only data API; no idempotency-key contract is published (all public
+    endpoints are GET retrievals).
+pagination:
+  style: null
+  note: No public pagination contract documented outside the gated knowledge base.
+versioning:
+  style: unversioned QMOD paths; semver QMod widget/SDK trains — see lifecycle/quotemedia-lifecycle.yml
+rate_limits:
+  note: >-
+    No public rate-limit headers or policy documented; usage is governed by
+    entitlements attached to the Webmaster ID.
+notes: >-
+  Captured from the publicly observable QMOD surface and marketing/support
+  pages; the complete request/response conventions reference is behind the
+  entitlement-gated Freshdesk knowledge base.

@@ -1,0 +1,33 @@
+# QuoteMedia
+
+> QuoteMedia, Inc. (OTC QMCI) is a financial market data and fintech company licensing real-time, delayed, and historical market data — equities, options, futures, commodities, currencies, funds, and indices — plus fundamentals, news, SEC/SEDAR filings, corporate actions, and ESG data. Delivery is via the QuoteMedia OnDemand (QMOD) REST API (JSON/XML/CSV), an enterprise tick-by-tick Streaming Data Feed (WebSocket, Java, .NET), SFTP file services, and the QMod library of embeddable HTML5 market-data widgets. Access is entitlement-managed via sales-provisioned Webmaster IDs; the detailed API reference sits behind a login on the Freshdesk knowledge base.
+
+## APIs
+
+- [QuoteMedia OnDemand (QMOD) Data API](https://www.quotemedia.com/apifeeds): Request/response REST API at https://app.quotemedia.com/data/<product>.<json|xml|csv> for quotes, trades, history, option chains, fundamentals, news, filings, corporate actions, and fund data. Requires a webmasterId entitlement parameter.
+- [Streaming Data Feed API](https://quotemedia.com/solutions/data-feed): Tick-by-tick Level 1/Level 2 streaming via WebSocket plus Java and .NET client SDKs. Sales-gated.
+- [File Services](https://quotemedia.com/solutions/data-feed): Bulk SFTP flat-file delivery of prices, financials, corporate actions, and fund data.
+- [Quotestream Connect for Developers](https://support.quotemedia.com/support/solutions/articles/13000091019-quotestream-connect-for-developers): Self-service package for non-professional developers (streaming + request APIs, developer kits; docs behind login).
+
+## SDKs
+
+- [npm: @quotemedia.com/streamer](https://www.npmjs.com/package/@quotemedia.com/streamer): First-party JavaScript streaming client.
+- [NuGet: QuotemediaStreamerClient](https://www.nuget.org/packages/QuotemediaStreamerClient): First-party .NET streaming client.
+- [Maven: com.quotemedia.streamer:streamerclient-java-core](https://central.sonatype.com/artifact/com.quotemedia.streamer/streamerclient-java-core): First-party Java streaming client.
+
+## Widgets
+
+- [QMod production components](https://qmod.quotemedia.com/tools/): Embeddable HTML5 market-data widgets (quotes, charts, financials, earnings, news, funds, options), versioned v1.x.
+- [QMod catalog / demos](https://demo.quotemedia.com/qmod-catalog): Live widget catalog and demos.
+
+## Docs
+
+- [API & data feed overview](https://www.quotemedia.com/apifeeds): Product-level API documentation and brochures.
+- [Support knowledge base](https://quotemediasupport.freshdesk.com/support/home): Detailed API reference (login required for most articles).
+- [Status page](https://status.quotemedia.com): Service status.
+
+## Optional
+
+- [QMOD brochure](https://brochures.quotemedia.com/quotemedia-on-demand)
+- [QMod content solutions brochure](https://brochures.quotemedia.com/qmod)
+- [Company blog](https://quotemedia.com/company/blog)

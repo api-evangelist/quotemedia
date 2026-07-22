@@ -1,0 +1,42 @@
+generated: '2026-07-22'
+method: searched
+source: >-
+  live probes of https://app.quotemedia.com/data 2026-07-22;
+  https://www.quotemedia.com/apifeeds;
+  https://support.quotemedia.com/support/solutions/articles/13000020415-qmod-the-future-of-financial-web-content
+summary:
+  types: [entitlement-id, session-token, credentials]
+  api_key_in: [query]
+  oauth2_flows: []
+schemes:
+  - name: webmasterId
+    type: apiKey
+    in: query
+    parameter: webmasterId
+    surface: QuoteMedia OnDemand (QMOD) REST API
+    description: >-
+      Every QMOD request requires a sales-provisioned Webmaster ID passed as a
+      query parameter, with data entitlements bound to that ID. Verified live:
+      requests without it return faultcode 0002 ("Webmaster ID is required"),
+      and an unentitled ID returns faultcode 403 FORBIDDEN.
+  - name: sid-session
+    type: session
+    surface: QMOD widgets / OnDemand sessions
+    description: >-
+      QMod embeddable components authenticate via the loader with access managed
+      by "domain, referrer, IP, or token-based controls" (per the public QMod
+      support article); a session identifier is negotiated by the loader rather
+      than embedded API keys.
+  - name: streamer-credentials
+    type: credentials
+    surface: Streaming Data Feed API (WebSocket / Java / .NET clients)
+    description: >-
+      The first-party streamer SDKs (npm @quotemedia.com/streamer, Maven
+      streamerclient-java-core, NuGet QuotemediaStreamerClient) connect with
+      sales-provisioned credentials; no self-service key issuance exists.
+docs: https://quotemediasupport.freshdesk.com/support/home
+notes: >-
+  No OAuth2/OIDC surface is published (no /.well-known/openid-configuration or
+  oauth-authorization-server on any host). Full authentication reference is
+  behind the entitlement-gated Freshdesk knowledge base; Quotestream Connect for
+  Developers is the self-service onboarding path for non-professional use.

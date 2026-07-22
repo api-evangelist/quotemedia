@@ -1,0 +1,33 @@
+generated: '2026-07-22'
+method: searched
+source: live probes of https://app.quotemedia.com/data (QMOD) 2026-07-22
+format: qmod-fault-envelope
+envelope:
+  description: >-
+    QMOD (QuoteMedia OnDemand) requests return HTTP 200 with an error object
+    inside the results envelope rather than RFC 9457 problem details. JSON shape:
+    {"results": {"copyright": "...", "error": {"faultcode": "<code>", "faultstring": "<message>"}}}.
+    XML responses carry the same fault fields.
+  fields:
+    - name: results.error.faultcode
+      description: QuoteMedia fault code (zero-padded string such as "0002", or an HTTP-style code such as "403").
+    - name: results.error.faultstring
+      description: Human-readable fault message.
+problems:
+  - faultcode: '0002'
+    faultstring: Webmaster ID is required. Please contact your system administrator for details.
+    meaning: Request missing the required webmasterId entitlement parameter.
+    observed: 'GET /data/getQuotes.json?symbols=AAPL (no webmasterId), 2026-07-22'
+  - faultcode: '0022'
+    faultstring: Invalid product.
+    meaning: The requested data product/endpoint name does not exist.
+    observed: 'GET /data/openapi.json, 2026-07-22'
+  - faultcode: '403'
+    faultstring: FORBIDDEN
+    meaning: Webmaster ID supplied but not entitled (invalid or unauthorized ID).
+    observed: 'GET /data/getQuotes.json?symbols=AAPL&webmasterId=99999, 2026-07-22'
+notes: >-
+  The full QMOD fault-code registry lives in the entitlement-gated Freshdesk
+  knowledge base (login required), so only live-observed codes are recorded here.
+  Community client libraries additionally document request-shape limits (e.g.
+  getQuotes batches capped at 100 symbols) that surface as client-side errors.

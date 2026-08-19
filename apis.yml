@@ -38,7 +38,7 @@ tags:
 - Reference Data
 created: '2026-07-21'
 modified: '2026-07-22'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: quotemedia:quotemedia-ondemand-api
   name: QuoteMedia OnDemand (QMOD) Data API

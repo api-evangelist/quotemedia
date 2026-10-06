@@ -58,7 +58,7 @@ tags_raw:
 - Fundamentals
 - Reference Data
 created: '2026-07-21'
-modified: '2026-07-22'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
 - aid: quotemedia:quotemedia-ondemand-api
@@ -141,6 +141,8 @@ apis:
     QuoteMedia support portal require a login (they redirect to Freshworks OAuth),
     so the developer kit contents are not publicly browsable.
 common:
+- url: https://blog.quotemedia.com/?feed=rss2
+  type: BlogRSS
 - type: DomainSecurity
   url: security/quotemedia-domain-security.yml
 - type: Packages

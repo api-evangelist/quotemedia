@@ -1,4 +1,4 @@
-# QuoteMedia (quotemedia)
+# QuoteMedia
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,113 +66,91 @@
 
 QuoteMedia, Inc. is an independent, publicly traded (OTC QMCI) financial market data and financial technology company headquartered in Fountain Hills, Arizona, founded in 1999. It licenses real-time, delayed, and historical market data - equities, options, futures, commodities, currencies, mutual funds, ETFs, and indices - plus fundamentals, news, SEC/SEDAR filings, corporate actions, earnings, fund research, and ESG data to brokerages, banks, media, and investor relations customers. Data is delivered through the QuoteMedia OnDemand (QMOD) cloud REST API in JSON, XML, and CSV, an enterprise tick-by-tick Streaming Data Feed with WebSocket, Java, and .NET APIs, and bulk file services over SFTP. Access is entitlement-managed via webmaster IDs provisioned through sales, with a Quotestream Connect self-service package for individual developers; detailed API reference documentation lives behind a login on the company's Freshdesk knowledge base.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/quotemedia/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/quotemedia/refs/heads/main/apis.yml)
+**Areas:** Finance · Market Data · Stocks · Options · Real-Time · Streaming · News · Fundamentals · Reference Data
 
-## Tags
+## QuoteMedia on APIs.io
 
-- Financial
-- Market Data
-- Stocks
-- Options
-- Real-Time
-- Streaming
-- News
-- Fundamentals
-- Reference Data
+Everything profiled for QuoteMedia is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/quotemedia/](https://apis.io/providers/quotemedia/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (4)
 
-- **Created:** 2026-07-21
-- **Modified:** 2026-07-21
+- [QuoteMedia OnDemand (QMOD) Data API](https://apis.io/apis/quotemedia/quotemedia-ondemand-api/) — Cloud-based request/response REST API delivering real-time and delayed Level 1/Level 2 quotes, trades, historical OHLCV and tick data, full option chains…
+- [QuoteMedia Streaming Data Feed API](https://apis.io/apis/quotemedia/quotemedia-streaming-data-feed-api/) — Enterprise tick-by-tick streaming feed for real-time or delayed Level 1 and Level 2 market data, normalized across exchanges and delivered through a…
+- [QuoteMedia File Services](https://apis.io/apis/quotemedia/quotemedia-file-services/) — Bulk data delivery via SFTP flat files for systematic import of price data, financials, corporate actions, and fund data, alongside historical time-series…
+- [Quotestream Connect for Developers](https://apis.io/apis/quotemedia/quotestream-connect-for-developers/) — Self-service package for non-professional developers building personal applications, combining tick-by-tick streaming data with request APIs, developer kits…
 
-## APIs
+### Published properties
 
-### QuoteMedia OnDemand (QMOD) Data API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Cloud-based request/response REST API delivering real-time and delayed Level 1/Level 2 quotes, trades, historical OHLCV and tick data, full option chains with Greeks, fundamentals, earnings, news from 300+ sources, SEC and SEDAR filings, corporate actions, fund data, insider and institutional ownership, ESG ratings, and master/reference data over HTTPS in JSON, XML, and CSV. The base host is live (endpoints such as getQuotes.json respond publicly) but every call requires a sales-provisioned Webmaster ID and entitlements; the full endpoint reference is behind the Freshdesk knowledge-base login.
+#### Security (2)
 
-- **Human URL:** [https://www.quotemedia.com/apifeeds](https://www.quotemedia.com/apifeeds)
-- **Base URL:** `https://app.quotemedia.com/data`
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Tags
+- [Quotemedia Authentication](https://apis.io/security/quotemedia/quotemedia-authentication/)
+- [Quotemedia Domain Security](https://apis.io/security/quotemedia/quotemedia-domain-security/)
 
-- Market Data
-- Quotes
-- Options
-- Fundamentals
-- News
-- REST
+## Where to find this API
 
-#### Properties
-
-- [Documentation](https://www.quotemedia.com/apifeeds)
-- [Documentation — QuoteMedia OnDemand brochure](https://brochures.quotemedia.com/quotemedia-on-demand)
-- [Documentation — Data Feed Solutions](https://quotemedia.com/solutions/data-feed)
-
-### QuoteMedia Streaming Data Feed API
-
-Enterprise tick-by-tick streaming feed for real-time or delayed Level 1 and Level 2 market data, normalized across exchanges and delivered through a WebSocket API plus Java and .NET client APIs. The company's QMZ (QuoteMedia Zero) offering delivers real-time price data with consolidated US volume over the same streaming API without exchange license agreements. Sales-gated; no public endpoint hosts or protocol reference are published.
-
-- **Human URL:** [https://quotemedia.com/solutions/data-feed](https://quotemedia.com/solutions/data-feed)
-
-#### Tags
-
-- Streaming
-- WebSocket
-- Level 2
-- Tick Data
-
-#### Properties
-
-- [Documentation](https://quotemedia.com/solutions/data-feed)
-
-### QuoteMedia File Services
-
-Bulk data delivery via SFTP flat files for systematic import of price data, financials, corporate actions, and fund data, alongside historical time-series downloads in CSV, XML, and JSON. Sales-gated enterprise service documented at the marketing level only.
-
-- **Human URL:** [https://quotemedia.com/solutions/data-feed](https://quotemedia.com/solutions/data-feed)
-
-#### Tags
-
-- Flat Files
-- SFTP
-- End of Day
-- Corporate Actions
-
-#### Properties
-
-- [Documentation](https://quotemedia.com/solutions/data-feed)
-
-### Quotestream Connect for Developers
-
-Self-service package for non-professional developers building personal applications, combining tick-by-tick streaming data with request APIs, developer kits with documentation and example code, 90 days of intraday history, EOD data, futures continuation data, and symbol lookup. The documentation articles on the QuoteMedia support portal require a login (they redirect to Freshworks OAuth), so the developer kit contents are not publicly browsable.
-
-- **Human URL:** [https://support.quotemedia.com/support/solutions/articles/13000091019-quotestream-connect-for-developers](https://support.quotemedia.com/support/solutions/articles/13000091019-quotestream-connect-for-developers)
-
-#### Tags
-
-- Developers
-- Streaming
-- Request API
-- Self-Service
-
-#### Properties
-
-- [Documentation](https://support.quotemedia.com/support/solutions/articles/13000091019-quotestream-connect-for-developers)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://quotemedia.com/)
-- [Portal](https://www.quotemedia.com/apifeeds)
 - [Documentation](https://quotemediasupport.freshdesk.com/support/home)
 - [Support](https://quotemediasupport.freshdesk.com/support/home)
-- [Status Page](https://status.quotemedia.com)
 - [Blog](https://quotemedia.com/company/blog)
-- [LinkedIn](https://www.linkedin.com/company/quotemedia)
-- [Terms of Service](https://quotemedia.com/legal/tos)
-- [Privacy Policy](https://quotemedia.com/legal/privacy-policy)
+- [Terms of service](https://quotemedia.com/legal/tos)
+- [Privacy policy](https://quotemedia.com/legal/privacy-policy)
+- [Status](https://status.quotemedia.com)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 21.7** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 69.6 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 44.0 |
+| Access clarity | 21.1 |
+
+**Agent readiness 5.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 18.5** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/quotemedia/](https://apis.io/providers/quotemedia/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for QuoteMedia: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/quotemedia/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
